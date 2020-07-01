@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#45ffffff"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#45ffffff"
+        android:gravity="center"
+        app:title="@string/app_name"
+       />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/view_line_05" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="2"
+                        android:text="websocket address"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:background="@drawable/editbox_bkg_ios"
+                        android:id="@+id/et_ip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="rtmp://218.2.234.171:13345/live/devid1"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btn_websocket"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/press_rect_radiusmin_strokeprimary_solidwidely_tobackground"
+                android:text="连接测试"
+                android:textColor="@color/press_text_normal"
+                />
+
+
+
+        </LinearLayout>
+
+</LinearLayout>
